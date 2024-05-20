@@ -1,0 +1,16 @@
+{
+  "name": "docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "sasa <sysmaaster@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "s": "sudo docker-compose down && sudo docker-compose build && sudo docker-compose up -d ",
+    "sd": "sudo docker-compose down && sudo docker-compose build && sudo docker-compose up  ",
+    "bld": "sudo docker-compose build ",
+    "udp": "sudo docker-compose up ",
+    "udpd": "sudo docker-compose up -d ",
+    "down": "sudo docker-compose down "
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
