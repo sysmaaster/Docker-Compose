@@ -67,6 +67,21 @@ services:
     command: npm run dev
 #===>END
 ##
+### fak_ee ==>
+  fak_ee:
+    build: ./ms/fak_ee
+    container_name: fak_ee
+    volumes:
+      - ./ms/fak_ee:/app/
+      - /app/node_modules/
+    ports:
+      - 8880:80
+    restart: always
+    environment:
+      - PORT=80
+    command: npm run dev
+#===>END
+##
 ### categories_service ==>
   categories_service:
     build: ./ms/categories_service
@@ -101,7 +116,7 @@ services:
 
 #===>END
 ##
-### BALANCER ==>
+### MARIA_DM ==>
   mariadb:
     image: 'jc21/mariadb-aria:latest'
     restart: always
@@ -116,7 +131,7 @@ services:
 
 #===>END
 ##
-###  ==> 
+### NGX ==> 
   nginx-proxy: 
     image: 'jc21/nginx-proxy-manager:latest'
     container_name: nginx-proxy-manager
@@ -142,4 +157,24 @@ services:
 
 #===>END
 ##
-###
+### BALANCER ==>
+#  balancer:
+#    container_name: "BALANCER"
+#    image: nginx
+#    volumes:
+#      - ./data/balancer/sites-enabled:/etc/nginx/sites-enabled
+#      - ./data/balancer/nginx.conf:/etc/nginx/nginx.conf
+#    depends_on:
+#      - mongo_express
+#      - node_red
+#3      - ui_service
+#    ports:
+#      - "21280:80"
+#    links:
+#      - mongo_express
+#      - node_red
+#      - ui_service
+#    restart: always
+#
+#===>END
+##

@@ -73,16 +73,15 @@ module.exports = {
     /** To password protect the Node-RED editor and admin API, the following
      * property can be used. See http://nodered.org/docs/security.html for details.
      */
-    adminAuth: {
+    /*adminAuth: {
         sessionExpiryTime: 8600,
         type: "credentials",
         users: [{
-            username: "user_sasa",
-            password: "$2b$08$x8PTxedT6k3jieR59l1Li.fH5m1ANG5tzDnVZ9h0o2AnipodAozZ2",
+            username: "admin",
+            password: "$apr1$vtEtxMKH$Uk5OwFo6MsSCE32btJGxN1",
             permissions: "*"
         }]
-    },
-
+    },*/
     /** The following property can be used to enable HTTPS
      * This property can be either an object, containing both a (private) key
      * and a (public) certificate, or a function that returns such an object.
@@ -255,7 +254,7 @@ module.exports = {
      * Available languages include: en-US (default), ja, de, zh-CN, zh-TW, ru, ko
      * Some languages are more complete than others.
      */
-    // lang: "de",
+     lang: "ru",
 
     /** Configure diagnostics options 
      * - enabled:  When `enabled` is `true` (or unset), diagnostics data will
